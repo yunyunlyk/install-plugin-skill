@@ -1,0 +1,6 @@
+# 「添加插件」装完后宿主加载这一行：lib/index.js 把随包的
+# skills/install-plugin/SKILL.md 注册进 ctx.skills（DSH 只从 skills 根目录发现 skill，
+# 插件包里的 skills/ 不会自动生效，必须由插件自己注册）。
+- insert:
+    - id: install-plugin-skill
+      name: 'dsh-install-plugin-skill'

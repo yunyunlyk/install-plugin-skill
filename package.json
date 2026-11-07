@@ -1,0 +1,29 @@
+{
+  "name": "dsh-install-plugin-skill",
+  "version": "0.2.0",
+  "description": "DSH 插件：随包提供 install-plugin skill —— 装 skill / 插件 / MCP 前先分类、按宿主版本选兼容版本，再安装、验证、回滚。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 <0.3.0",
+    "node": ">=22.19"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
